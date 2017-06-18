@@ -1,0 +1,7 @@
+Put compiled SimpleEditControl library in this folder.
+
+SimpleEditor expects to find here one of the following variants:
+- SEditControlDebug.lib - debug version for desktop Windows
+- SEditControlRelease.lib - release versopm for desktop Windows
+- SEditControlCEDebug.lib - debug version for Windows Mobile
+- SEditControlCERelease.lib - release version for Windows Mobile

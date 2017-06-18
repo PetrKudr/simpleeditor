@@ -1,0 +1,5 @@
+LIBRARY	"SmartComments"
+
+EXPORTS
+SECreatePlugin
+SEDeletePlugin

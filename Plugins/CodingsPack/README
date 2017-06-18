@@ -1,0 +1,4 @@
+Third party library is used to auto detect coding of a text.
+Files:
+    adbytecp.h
+    adbytecp.c

@@ -1,0 +1,162 @@
+
+#ifdef _WIN32_WCE
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FILE     "File"
+    IDS_MENU     "Menu"
+    IDS_OK       "Apply"
+    IDS_CANCEL   "Cancel"
+END
+
+IDM_MAIN_MENU SHMENUBAR DISCARDABLE 
+BEGIN
+    IDM_MAIN_MENU, 
+    2,
+    I_IMAGENONE, IDM_FILE, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_FILE, 1, 0,
+    I_IMAGENONE, IDM_MENU, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_MENU, 0, 1
+END
+
+IDM_OKCANCEL_MENU SHMENUBAR DISCARDABLE 
+BEGIN
+    -1, 
+    2,
+    I_IMAGENONE, IDOK, TBSTATE_ENABLED, 
+    TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_OK, 1, NOMENU,
+    I_IMAGENONE, IDCANCEL, TBSTATE_ENABLED, 
+    TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE, IDS_CANCEL, 0, NOMENU
+END
+#endif
+
+IDM_MAIN_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "File"
+    BEGIN
+      //MENUITEM "1", -1
+        MENUITEM "New",          CMD_NEWDOC
+        MENUITEM SEPARATOR
+        MENUITEM "Open...",      CMD_OPENDOC
+        POPUP "Reopen in"
+        BEGIN
+          MENUITEM "Auto",          CMD_REOPEN_AUTO
+        END
+        POPUP "Recent"
+        BEGIN
+          MENUITEM "Clear",             CMD_CLEARRECENT
+          MENUITEM SEPARATOR
+          MENUITEM "<Empty>",           -1
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Save",                CMD_SAVEDOC
+        MENUITEM "Save as...",          CMD_SAVEASDOC
+        MENUITEM "Close",               CMD_CLOSEDOC
+        MENUITEM SEPARATOR
+        POPUP "Edit"
+        BEGIN
+          MENUITEM "Cut",              CMD_CUT
+          MENUITEM "Copy",             CMD_COPY
+          MENUITEM "Paste",            CMD_PASTE
+          MENUITEM "Delete",           CMD_DELETE
+          MENUITEM SEPARATOR
+          MENUITEM "Select all",       CMD_SELECTALL
+          MENUITEM SEPARATOR
+          MENUITEM "Find",             IDM_FIND
+          MENUITEM "Replace",          IDM_REPLACE
+          MENUITEM SEPARATOR
+          MENUITEM "Undo",         CMD_UNDO
+          MENUITEM "Redo",         CMD_REDO
+        END
+        MENUITEM "Insert...",          IDM_QINSERT_M
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",               CMD_EXIT
+    END
+    POPUP "Menu"
+    BEGIN
+      //MENUITEM "2", -1
+        POPUP "Documents"
+        BEGIN
+          MENUITEM "Close all",     CMD_CLOSEALL
+          MENUITEM "Save all",      CMD_SAVEALL
+          MENUITEM SEPARATOR
+        END
+        POPUP "Plugins"
+        BEGIN
+          MENUITEM "<Empty>",           -1
+        END
+        MENUITEM SEPARATOR
+        POPUP "View"
+        BEGIN
+          MENUITEM "Wordwrap",         CMD_WORDWRAP
+          MENUITEM "Type pal",         CMD_SMARTINPUT
+          MENUITEM "Drag mode",        CMD_DRAGMODE
+          MENUITEM "Line scrolling",   CMD_SCROLLBYLINE
+          MENUITEM SEPARATOR
+          MENUITEM "Full screen",      CMD_FULLSCREEN
+        END
+        POPUP "Goto"
+        BEGIN
+          MENUITEM "Line...",        IDM_GOTOLINE
+          MENUITEM "Top of file",    CMD_GOTOBEGIN
+          MENUITEM "End of file",    CMD_GOTOEND
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Settings...",    IDM_OPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "About",          IDM_ABOUT
+    END
+END
+
+
+IDM_OKCANCEL_MENU MENU DISCARDABLE
+BEGIN
+  MENUITEM "OK",         IDOK
+  MENUITEM "Cancel",     IDCANCEL
+END
+
+IDM_DOCPOPUP_MENU MENU DISCARDABLE
+BEGIN
+  POPUP "Documents"
+  BEGIN
+    MENUITEM "Close all",     CMD_CLOSEALL
+    MENUITEM "Save all",      CMD_SAVEALL
+    MENUITEM SEPARATOR
+  END
+END
+
+IDM_EDITORPOPUP_MENU MENU DISCARDABLE
+BEGIN
+  POPUP "Actions"
+  BEGIN
+    MENUITEM "Cut",              CMD_CUT
+    MENUITEM "Copy",             CMD_COPY
+    MENUITEM "Paste",            CMD_PASTE
+    MENUITEM "Delete",           CMD_DELETE
+    MENUITEM SEPARATOR
+    MENUITEM "Select all",       CMD_SELECTALL
+    MENUITEM SEPARATOR
+    MENUITEM "Undo",             CMD_UNDO
+    MENUITEM "Redo",             CMD_REDO
+  END
+END
+
+IDM_PLUGINSPOPUP_MENU MENU DISCARDABLE
+BEGIN
+  POPUP "Plugins"
+  BEGIN
+    MENUITEM "<Empty>",           -1
+  END
+END
+
+IDM_TABPOPUP_MENU MENU DISCARDABLE
+BEGIN
+  POPUP "Actions"
+  BEGIN
+    MENUITEM "Info",              IDM_FILEINFO
+  END
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+  IDS_MENU_EMPTY          "<Empty>"
+END

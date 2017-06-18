@@ -1,0 +1,5 @@
+LIBRARY	"EditControlEmulator"
+
+EXPORTS
+SECreatePlugin
+SEDeletePlugin

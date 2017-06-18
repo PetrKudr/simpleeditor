@@ -1,0 +1,38 @@
+#include "res.hpp"
+#include <windows.h>
+#include <commctrl.h>
+
+#ifdef _WIN32_WCE
+#include <resdefce.h>
+#endif
+
+Accelerators ACCELERATORS 
+{ 
+  "N",    CMD_NEWDOC,            CONTROL, VIRTKEY
+  "Q",    CMD_CLOSEDOC,          CONTROL, VIRTKEY
+  "O",    CMD_OPENDOC,           CONTROL, VIRTKEY
+  "S",    CMD_SAVEDOC,           CONTROL, VIRTKEY
+  "I",    IDM_QINSERT_M,         CONTROL, VIRTKEY
+  "G",    IDM_GOTOLINE,          CONTROL, VIRTKEY
+  "1",    CMD_GOTOBEGIN,         CONTROL, VIRTKEY
+  "2",    CMD_GOTOEND,           CONTROL, VIRTKEY
+  "F",    IDM_FIND,              CONTROL, VIRTKEY
+  "H",    IDM_REPLACE,           CONTROL, VIRTKEY
+  "B",    CMD_FULLSCREEN,        CONTROL, VIRTKEY
+  "D",    CMD_SHOWDOCMENU,       CONTROL, VIRTKEY
+  "P",    CMD_SHOWPLUGINSMENU,   CONTROL, VIRTKEY
+  "R",    CMD_REOPEN_AUTO,       CONTROL, VIRTKEY
+//"T",    CMD_TEST,              CONTROL, VIRTKEY
+}
+
+// dialogs resources
+#include "res_dlg.rc2"
+
+// menu resources
+#include "res_menu.rc2"
+
+APPLICATION_ICON_0 ICON APPICON1.ico
+APPLICATION_ICON_1 ICON APPICON2.ico
+
+IDB_GETFILE16 BITMAP getfile16.bmp
+IDB_GETFILE32 BITMAP getfile32.bmp

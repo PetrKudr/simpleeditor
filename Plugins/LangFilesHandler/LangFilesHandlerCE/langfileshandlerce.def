@@ -1,0 +1,5 @@
+LIBRARY	"LangFilesHandlerCE"
+
+EXPORTS
+SECreatePlugin
+SEDeletePlugin
