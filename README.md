@@ -11,6 +11,7 @@ Plugins - folder with various plugins for the notepad.
 
 
 How to build:
+The project was created in VS2008, so is suposed to be built using VS2008.
 1) Build SimpleEditControl.
 2) Put built .lib file into folder SimpleEditor/Source/SEditControl. Rename library according to README file.
 3) Build SimpleEditor.
