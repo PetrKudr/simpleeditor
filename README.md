@@ -1,4 +1,4 @@
-Source codes of notepad for Windows Mobile 5.0 and later, known as CrossPad.
+Sources of notepad for Windows Mobile 5.0 and later, known as CrossPad.
 
 This is an university project which later was ported to Windows Mobile and further developed as notepad.
 
